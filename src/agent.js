@@ -3,7 +3,8 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'https://abhaywp1.rtd.squareops.co.in/api';
+#const API_ROOT = 'https://abhaywp1.rtd.squareops.co.in/api';
+const API_ROOT = `${process.env.REACT_APP_API_NODEJS_URL}`;
 
 const encode = encodeURIComponent;
 const responseBody = res => res.body;
